@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, orange, lightyellow);
+    position: relative;
+}
+
+header{
+    text-align: center;
+    display: relative;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    line-height: 2;
+    background: linear-gradient(135deg, rgb(197, 228, 197), rgb(207, 233, 207));
+    color: #1b1a1a;
+
+}
+
+#logo1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#logo2{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header h1{
+    font-size: 40px;
+    font-family: cursive;
+    
+}
+
+header h4{
+    font-size: 20px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main{
+    padding: 20px;
+    margin:0 20px;
+    margin-top: 0;
+    background-color: white;
+}
+/*Section Plats principaux*/
+
+section h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: orange;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.orange-line {
+  border: none;
+  margin: auto;
+  height: 3px;
+  max-width: 1100px;
+  background-color: orange;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.principale_img{
+   display: flex;
+   margin-bottom: 40px;
+   justify-content: space-around;
+}
+
+.principale_txt{
+    padding: 30px;
+    width: 750px;
+    background-color: #fafafa;
+    border-left: solid 6px orange;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    transition: 0.6s ;
+    
+}
+
+.principale_txt:hover{
+    transform: scale(1.01);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.principale_txt h3{
+    font-size: 24px; 
+    margin-bottom: 10px;
+    
+}
+
+.principale_txt p{
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.principale_txt span{
+    display: block;
+    text-align: end;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color:green;
+}
+
+
+.photos{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: 0.6s ;
+}
+
+.photos:hover{
+     transform: scale(1.03);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+footer{
+    margin:0 20px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #edebeb;
+    border-top: solid 1px orange;
+    box-sizing: border-box;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 250px;
+}
+
+.info{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add_hor,.liens,.reseaux_sociaux{
+    text-align: center;
+    line-height: 1.4;
+    font-size: 16px;
+    padding: 0;
+    list-style: none;
+    
+}
+
+.liens li a:hover,.reseaux_sociaux li a:hover{
+    color: rgb(254, 166, 3);
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px #333;
+   
+}
+
+.liens li,.reseaux_sociaux li{
+    list-style-type: none;
+   
+    color: #333;
+}
+
+.liens li a,.reseaux_sociaux li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.reseaux_sociaux li a img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+
+/* --- Media Queries pour responsive --- */
+
+/* Tablettes et mobiles moyens */
+@media (max-width: 1024px) {
+    .principale_img {
+        flex-direction: column; /* empile image + texte */
+        align-items: center;
+    }
+
+    .principale_txt {
+        width: 80%; /* texte plus large pour s'adapter */
+        margin-bottom: 20px;
+        height: auto; /* laisse le contenu définir la hauteur */
+        padding: 20px;
+    }
+
+    #moy1, #moy2, #moy3, #moy4, #moy5, #moy6 {
+        width: 60%;
+        height: 350px;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    .photos {
+        width: 60%;
+        height: 350px;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header h4 {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    footer {
+        padding: 10px 5px;
+        height: auto;
+        gap: 20px;
+    }
+
+    footer p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    #logo1, #logo2 {
+        width: 40px;
+        height: 40px;
+        top: 5px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h4 {
+        font-size: 14px;
+    }
+
+    .principale_txt h3 {
+        font-size: 20px;
+    }
+
+    .principale_txt p {
+        font-size: 16px;
+    }
+
+    .principale_txt{
+        width: 90%;
+        padding: 15px;
+        height:auto;
+    }
+
+    .principale_txt span {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+     #moy1, #moy2, #moy3, #moy4, #moy5, #moy6 {
+        width: 50%;
+        height: 200px;
+        margin-bottom: 20px;
+        object-fit: cover;
+    }
+
+    .photos {
+        width: 50%;
+        height: 200px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    footer {
+        padding: 10px 5px;
+        height: auto;
+        gap: 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+    .info {
+        gap: 15px;
+    }
+
+    .add_hor, .liens, .reseaux_sociaux {
+        font-size: 13px;
+    }
+}
